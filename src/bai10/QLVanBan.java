@@ -12,27 +12,40 @@ public class QLVanBan {
      {
             this.vanbans = new ArrayList<>();
      }
-    public int count( String str)
+    public void count( String str)
     {
-        if (str == null) {
-            return 0;
+        int letterCount=0,digitCount=0,wordCount=0;
+
+        for(int i=0;i<str.length();i++){
+            if(Character.isLetter(str.charAt(i))) letterCount++;
+            else if(Character.isDigit(str.charAt(i))) digitCount++;                         
         }
-        int count = 0;
-        int size = str.length();
-        boolean notCounted = true;
-        for (int i = 0; i < size; i++) {
-            if (str.charAt(i) != space && str.charAt(i) != tab 
-                    && str.charAt(i) != breack_line) {
-                if(notCounted) {
-                    count++;
-                    notCounted = false;
-                }
-            } else {
-                notCounted = true;
-            }
+
+        String[] strArr = str.split("\\s",0);
+        for (String strArr1 : strArr) {
+            if (!strArr1.isEmpty()) 
+                wordCount++;           //  https://tiendungtcu.wordpress.com/2016/09/12/thuc-hanh-java-bai-20-dem-chu-cai-chu-so-tu-trong-xau/
         }
-        return count;
-       
+        System.out.println("So ky tu: "+letterCount);
+        System.out.println("So chu so: "+digitCount);
+        System.out.println("So tu: "+wordCount);
+
+       // https://tailieu.pro/chuan-hoa-xau-trong-java/#31_Xoa_khoang_trang_thua
+            str=str.trim() ;
+                    str = str.replaceAll("\\s+", " ");
+                    System.out.println("So tu: "+str);
+                    int  count = 0;
+                    for (int i = 0; i < str.length(); i++) {
+
+                        // Nếu ký tự tại vị trí thứ i bằng 'a' thì tăng count lên 1
+                        if (str.charAt(i) == 'a' ||str.charAt(i) == 'A' ) {
+                            count++;
+                        }
+                    }
+                    System.out.println("So ký tự a or A: " + count);
+
+                    
+                
 
     }
 }

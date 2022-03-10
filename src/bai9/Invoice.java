@@ -37,5 +37,10 @@ public class Invoice {
     // public void setMoney(double money) {
     //     this.money = money;
     // }
+    @Override
+    public String toString() {
+        return "Invoice [customer=" + customer + ", newElectricNumber=" + newElectricNumber + ", oldElectricNumber="
+                + oldElectricNumber + "]";
+    }
     
 }

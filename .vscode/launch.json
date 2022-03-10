@@ -8,6 +8,13 @@
             "type": "java",
             "name": "Launch Main",
             "request": "launch",
+            "mainClass": "b2.Main",
+            "projectName": "OOP_8ccb0017"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
             "mainClass": "b1.Main",
             "projectName": "OOP_8ccb0017"
         },

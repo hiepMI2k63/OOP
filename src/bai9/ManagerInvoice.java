@@ -4,7 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ManagerInvoice {
-   private List<Invoice> invoices;
+  
+private List<Invoice> invoices;
    public  ManagerInvoice()
    {
        this.invoices = new ArrayList<>();
@@ -24,5 +25,9 @@ public class ManagerInvoice {
         for (Invoice card : this.invoices) {
             System.out.println(card);
         }
+    }
+    @Override
+    public String toString() {
+        return "ManagerInvoice [invoices=" + invoices + "]";
     }
 }
