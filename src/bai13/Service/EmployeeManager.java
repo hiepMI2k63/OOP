@@ -31,7 +31,18 @@ public class EmployeeManager {
         this.employees.remove(employee);
         return true;
     }
+    public boolean updateById(String id) {
+        Employee employee = this.findById(id);
+        if (employee == null) {
+            return false;
+        }
+        // this.employees.remove(employee);
 
+        employee.getId();
+        
+        
+        return true;
+    }
     /**
      * type = 0 => Experience
      * type = 1 => Fresher

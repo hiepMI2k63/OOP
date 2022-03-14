@@ -6,6 +6,41 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Launch tewww",
+            "request": "launch",
+            "mainClass": "test.tewww",
+            "projectName": "OOP_8ccb0017"
+        },
+        {
+            "type": "java",
+            "name": "Launch EmployeeManager",
+            "request": "launch",
+            "mainClass": "bai13.Service.EmployeeManager",
+            "projectName": "OOP_8ccb0017"
+        },
+        {
+            "type": "java",
+            "name": "Launch Main",
+            "request": "launch",
+            "mainClass": "bai13.Main",
+            "projectName": "OOP_8ccb0017"
+        },
+        {
+            "type": "java",
+            "name": "Launch test2",
+            "request": "launch",
+            "mainClass": "test.test2",
+            "projectName": "OOP_8ccb0017"
+        },
+        {
+            "type": "java",
+            "name": "Launch test1$Main",
+            "request": "launch",
+            "mainClass": "test.test1$Main",
+            "projectName": "OOP_8ccb0017"
+        },
+        {
+            "type": "java",
             "name": "Launch Main",
             "request": "launch",
             "mainClass": "b2.Main",

@@ -9,19 +9,12 @@ public class Intern extends Employee {
     private int semester;
     private String universityName;
 
-    public Intern() {
-    }
 
-    public Intern(String major, int semester, String universityName) {
-        this.major = major;
-        this.semester = semester;
-        this.universityName = universityName;
-    }
 
-    public Intern(String id, String fullName, LocalDate birthday, String phone, String email, List<Certification> certificates, String major, int semester, String universityName) {
+    public Intern(String id, String fullName, String birthday, String phone, String email, List<Certification> certificates, String major, int semester2, String universityName) {
         super(id, fullName, birthday, phone, email, certificates);
         this.major = major;
-        this.semester = semester;
+        this.semester = semester2;
         this.universityName = universityName;
     }
 
@@ -56,15 +49,19 @@ public class Intern extends Employee {
 
     @Override
     public String toString() {
-        return "Intern{" +
-                "id='" + id + '\'' +
-                ", fullName='" + fullName + '\'' +
-                ", birthday=" + birthday +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", major='" + major + '\'' +
-                ", semester=" + semester +
-                ", universityName='" + universityName + '\'' +
-                '}';
+        return "Fresher{" +
+        "id='" + id + '\'' +
+        ", fullName='" + fullName + '\'' +
+        ", birthday=" + birthday +
+        ", phone='" + phone + '\'' +
+        ", email='" + email + '\'' +
+        "Intern [major=" + major + ", semester=" + semester +
+        ", cer=" + certificates +
+
+        ", universityName='" + universityName + '\'' +
+        '}';
+       // return "Intern [major=" + major + ", semester=" + semester + ", universityName=" + universityName + "]";
     }
+
+   
 }

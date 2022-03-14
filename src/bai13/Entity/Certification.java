@@ -3,55 +3,57 @@ package bai13.Entity;
 import java.time.LocalDate;
 
 public class Certification {
-    private String id;
-    private String name;
-    private String rank;
-    private LocalDate date;
+    private String idCertification;
+    private String nameCertification;
+    private String rankCertification;
+    private LocalDate dateCertification;
 
     public Certification() {
     }
 
     @Override
     public String toString() {
-        return "Certification [date=" + date + ", id=" + id + ", name=" + name + ", rank=" + rank + "]";
+        return "Certification [date=" + dateCertification + ", id=" + idCertification + ", name=" + nameCertification + ", rank=" + rankCertification + "]";
     }
 
     public Certification(String id, String name, String rank, LocalDate date) {
-        this.id = id;
-        this.name = name;
-        this.rank = rank;
-        this.date = date;
+        this.idCertification = id;
+        this.nameCertification = name;
+        this.rankCertification = rank;
+        this.dateCertification = date;
     }
 
-    public String getId() {
-        return id;
+    public String getIdCertification() {
+        return idCertification;
     }
 
-    public void setId(String id) {
-        this.id = id;
+    public void setIdCertification(String idCertification) {
+        this.idCertification = idCertification;
     }
 
-    public String getName() {
-        return name;
+    public String getNameCertification() {
+        return nameCertification;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setNameCertification(String nameCertification) {
+        this.nameCertification = nameCertification;
     }
 
-    public String getRank() {
-        return rank;
+    public String getRankCertification() {
+        return rankCertification;
     }
 
-    public void setRank(String rank) {
-        this.rank = rank;
+    public void setRankCertification(String rankCertification) {
+        this.rankCertification = rankCertification;
     }
 
-    public LocalDate getDate() {
-        return date;
+    public LocalDate getDateCertification() {
+        return dateCertification;
     }
 
-    public void setDate(LocalDate date) {
-        this.date = date;
+    public void setDateCertification(LocalDate dateCertification) {
+        this.dateCertification = dateCertification;
     }
+
+   
 }

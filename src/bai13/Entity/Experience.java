@@ -1,21 +1,16 @@
 package bai13.Entity;
 
+
 import java.time.LocalDate;
 import java.util.List;
 
 public class Experience extends Employee{
-    private int yearOfExperience;
+    private LocalDate yearOfExperience;
     private String proSkill;
 
-    public Experience() {
-    }
 
-    public Experience(int yearOfExperience, String proSkill) {
-        this.yearOfExperience = yearOfExperience;
-        this.proSkill = proSkill;
-    }
 
-    public Experience(String id, String fullName, LocalDate birthday, String phone, String email, List<Certification> certificates, int yearOfExperience, String proSkill) {
+    public Experience(String id, String fullName, String birthday, String phone, String email, List<Certification> certificates, LocalDate yearOfExperience, String proSkill) {
         super(id, fullName, birthday, phone, email, certificates);
         this.yearOfExperience = yearOfExperience;
         this.proSkill = proSkill;
@@ -26,11 +21,11 @@ public class Experience extends Employee{
         System.out.println(this);
     }
 
-    public int getYearOfExperience() {
+    public LocalDate getYearOfExperience() {
         return yearOfExperience;
     }
 
-    public void setYearOfExperience(int yearOfExperience) {
+    public void setYearOfExperience(LocalDate yearOfExperience) {
         this.yearOfExperience = yearOfExperience;
     }
 
@@ -51,6 +46,7 @@ public class Experience extends Employee{
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", yearOfExperience=" + yearOfExperience +
+                ", certification=" + certificates +
                 ", proSkill='" + proSkill + '\'' +
                 '}';
     }

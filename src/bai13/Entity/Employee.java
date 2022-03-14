@@ -1,27 +1,20 @@
 package bai13.Entity;
 
-import java.time.LocalDate;
+
+
 import java.util.List;
 
 public abstract class Employee {
     public static long count = 0;
     protected String id;
     protected String fullName;
-    protected LocalDate birthday;
+    protected String birthday;
     protected String phone;
     protected String email;
     protected List<Certification> certificates;
 
-    public Employee() {}
-    
-
-    @Override
-    public String toString() {
-        return "Employee [birthday=" + birthday + ", certificates=" + certificates + ", email=" + email + ", fullName="
-                + fullName + ", id=" + id + ", phone=" + phone + "]";
-    }
-
-    public Employee(String id, String fullName, LocalDate birthday, String phone, String email, List<Certification> certificates) {
+    public Employee(String id, String fullName, String birthday, String phone, String email,
+            List<Certification> certificates) {
         this.id = id;
         this.fullName = fullName;
         this.birthday = birthday;
@@ -29,6 +22,14 @@ public abstract class Employee {
         this.email = email;
         this.certificates = certificates;
     }
+
+
+    @Override
+    public String toString() {
+        return "Employee [birthday=" + birthday + ", certificates=" + certificates + ", email=" + email + ", fullName="
+                + fullName + ", id=" + id + ", phone=" + phone + "]";
+    }
+
 
     public abstract void showInformation();
 
@@ -48,11 +49,11 @@ public abstract class Employee {
         this.fullName = fullName;
     }
 
-    public LocalDate getBirthday() {
+    public String getBirthday() {
         return birthday;
     }
 
-    public void setBirthday(LocalDate birthday) {
+    public void setBirthday(String birthday) {
         this.birthday = birthday;
     }
 

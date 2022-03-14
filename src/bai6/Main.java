@@ -41,10 +41,15 @@ public class Main {
                       System.out.println( school.countStudent23YearOldInQ());     
                     break;
                 }
+                case "4":{
+               
+                  return;
+              }
                 default:
                     break;
             }
         }
+   
     }
    
 }

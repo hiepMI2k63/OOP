@@ -7,26 +7,27 @@ public class Fresher extends Employee {
     private String graduationRank;
     private String universityName;
 
-    public Fresher() {
+
+   
+
+    @Override
+    public void showInformation() {
+        System.out.println(this);
     }
 
-    public Fresher(LocalDate graduationDate, String graduationRank, String universityName) {
-        this.graduationDate = graduationDate;
-        this.graduationRank = graduationRank;
-        this.universityName = universityName;
-    }
 
-    public Fresher(String id, String fullName, LocalDate birthday, String phone, String email, List<Certification> certificates, LocalDate graduationDate, String graduationRank, String universityName) {
+
+
+    public Fresher(String id, String fullName, String birthday, String phone, String email,
+            List<Certification> certificates, LocalDate graduationDate, String graduationRank, String universityName) {
         super(id, fullName, birthday, phone, email, certificates);
         this.graduationDate = graduationDate;
         this.graduationRank = graduationRank;
         this.universityName = universityName;
     }
 
-    @Override
-    public void showInformation() {
-        System.out.println(this);
-    }
+
+
 
     public LocalDate getGraduationDate() {
         return graduationDate;
@@ -61,6 +62,7 @@ public class Fresher extends Employee {
                 ", phone='" + phone + '\'' +
                 ", email='" + email + '\'' +
                 ", graduationDate=" + graduationDate +
+                ", cer=" + certificates +
                 ", graduationRank='" + graduationRank + '\'' +
                 ", universityName='" + universityName + '\'' +
                 '}';
